@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Инструменты</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../images/music.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind Configuration -->
+    <!-- JS Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js" defer></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+
+  <!-- Navigation Bar -->
+  <nav class="shadow-md bg-white mb-1">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="../index.html" class="flex items-center">
+                <img src="../images/music.png" class="h-8 mr-2" alt="MelodyMart" /><span
+                class="text-2xl font-bold text-indigo-700">MelodyMart</span>
+            </a>
+            <div class="hidden md:block ml-10">
+                <div class="space-x-6">
+                  <a href="../index.html" class="text-gray-600 hover:text-indigo-700">Главная</a>
+                  <a href="inst.html" class="text-indigo-700 font-semibold">Инструменты</a>
+                  <a href="about.html" class="text-gray-600 hover:text-indigo-700">О нас</a>
+                  <a href="#" class="text-gray-600 hover:text-indigo-700">Контакты</a>
+                </div>
+            </div>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse relative">
+              <button type="button" class="text-gray-600 hover:text-indigo-700" id="user-menu-button">
+                <span class="sr-only">Открыть меню пользователя</span>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+              </button>
+              <div id="user-menu" class="hidden absolute right-0 top-10 z-50 mt-2 w-48 bg-white rounded-md shadow-lg origin-top-right ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">                <ul class="py-1" id="user-menu-content">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" id="user-menu-content">
+                  <!-- JS вставит сюда пункты меню -->
+                </ul>
+              </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+                <button type="button"
+                    class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Открыть меню</span>
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="../index.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Главная</a>
+            <a href="inst.html"
+                class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Инструменты</a>
+            <a href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">О
+                нас</a>
+            <a href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Контакты</a>
+        </div>
+    </div>
+</nav>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <div class="bg-indigo-600 py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
+          Выберите свой инструмент
+        </h1>
+        <p class="mt-4 text-xl text-indigo-100">
+          Найдите идеальный инструмент для реализации ваших музыкальных талантов.
+        </p>
+        <div class="mt-8">
+          <!-- You can add a search bar here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Instruments Grid -->
+    <section class="max-w-6xl mx-auto mt-12 px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Acoustic Guitars -->
+        <a href="acoustic.html" class="block rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_46/467748/19401841_800.jpg" alt="Акустические гитары" class="w-full h-48 object-contain bg-white p-4">
+          <div class="p-4 bg-white">
+            <h3 class="text-xl font-semibold text-gray-800">Акустические гитары</h3>
+            <p class="text-gray-600 mt-2">Широкий выбор акустических гитар для начинающих и профессионалов.</p>
+          </div>
+        </a>
+
+        <!-- Electric Guitars -->
+        <a href="guitars.html" class="block rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_60/609442/19783049_800.jpg" alt="Электрогитары" class="w-full h-48 object-contain bg-white p-4">
+          <div class="p-4 bg-white">
+            <h3 class="text-xl font-semibold text-gray-800">Электрогитары</h3>
+            <p class="text-gray-600 mt-2">Лучшие электрогитары от ведущих мировых брендов.</p>
+          </div>
+        </a>
+
+        <!-- Bass Guitars -->
+        <a href="bass.html" class="block rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_60/608533/19758774_800.jpg" alt="Бас-гитары" class="w-full h-48 object-contain bg-white p-4">
+          <div class="p-4 bg-white">
+            <h3 class="text-xl font-semibold text-gray-800">Бас-гитары</h3>
+            <p class="text-gray-600 mt-2">Мощные и надежные бас-гитары для любого стиля музыки.</p>
+          </div>
+        </a>
+
+        <!-- Drums -->
+        <a href="drums.html" class="block rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="https://audiobe.ru/images/stories/virtuemart/product/15776500_800.jpg" alt="Барабаны" class="w-full h-48 object-contain bg-white p-4">
+          <div class="p-4 bg-white">
+            <h3 class="text-xl font-semibold text-gray-800">Барабаны</h3>
+            <p class="text-gray-600 mt-2">Акустические барабаны для любых музыкальных задач</p>
+          </div>
+        </a>
+
+        <!-- Electronic Drums -->
+        <a href="edrums.html" class="block rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_42/428224/17105803_800.jpg" alt="Электронные барабаны" class="w-full h-48 object-contain bg-white p-4">
+          <div class="p-4 bg-white">
+            <h3 class="text-xl font-semibold text-gray-800">Электронные барабаны</h3>
+            <p class="text-gray-600 mt-2">Тихие электронные барабаны для домашних занятий и студийной записи.</p>
+          </div>
+        </a>
+
+        <!-- Combo Amps -->
+        <a href="combos.html" class="block rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+          <img src="https://impult.ru/preview/r/-x-/upload/iblock/d8b/d8b86f48cd6d50f7aaa37537ffc11ef5.jpg" alt="Комбоусилители" class="w-full h-48 object-contain bg-white p-4">
+          <div class="p-4 bg-white">
+            <h3 class="text-xl font-semibold text-gray-800">Комбоусилители</h3>
+            <p class="text-gray-600 mt-2">Отличные комбоусилители для гитар всех видов!</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 mt-12 py-6">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+  
+          <!-- Company Info -->
+          <div>
+              <h3 class="text-sm font-semibold text-gray-50 mb-2 uppercase tracking-wider">О компании</h3>
+              <p class="text-xs leading-relaxed">MelodyMart — ваш надежный магазин музыкальных инструментов с широким ассортиментом и отличным сервисом. Мы стремимся предоставить музыкантам все необходимое для творчества и профессионального роста.</p>
+          </div>
+  
+          <!-- Contact Info -->
+          <div>
+              <h3 class="text-sm font-semibold text-gray-50 mb-2 uppercase tracking-wider">Контакты</h3>
+              <ul class="text-xs space-y-1">
+                <li>
+                    <span class="font-medium">Телефон:</span>
+                    <a href="tel:+71234567890" class="hover:text-white">+7 (383) 550-20-50</a>
+                </li>
+                <li>
+                    <span class="font-medium">Email:</span>
+                    <a href="mailto:info@melodymart.ru" class="hover:text-white">melodymart@info.com</a>
+                </li>
+                <li>
+                    <span class="font-medium">Адрес:</span>
+                    г. Москва, 1-я Тверская-Ямская ул., 21
+                </li>
+            </ul>
+          </div>
+  
+          <!-- Social Media -->
+          <div>
+              <h3 class="text-sm font-semibold text-gray-50 mb-2 uppercase tracking-wider">Мы в соцсетях</h3>
+              <ul class="flex justify-start space-x-3">
+                  <li>
+                      <a href="#" class="text-gray-500 hover:text-white transition-colors duration-200" aria-label="ВКонтакте">
+                          <i class="fab fa-vk fa-lg"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-gray-500 hover:text-white transition-colors duration-200" aria-label="Telegram">
+                          <i class="fab fa-telegram fa-lg"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-gray-500 hover:text-white transition-colors duration-200" aria-label="Instagram">
+                          <i class="fab fa-instagram fa-lg"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="text-center text-gray-500 text-xs py-2">
+          &copy; 2024 MelodyMart. Все права защищены.
+      </div>
+  </footer>
+  </body>
+  <script type="module" src="../js/userMenu.js"></script>
+  </html>
