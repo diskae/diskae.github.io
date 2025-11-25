@@ -1,0 +1,124 @@
+.content {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.instrument {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.instrument img {
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+/* Контейнер карусели */
+#carousel-track > div img {
+  width: 100%; /* Занимает всю ширину карточки */
+  height: 180px; /* Фиксированная высота */
+  object-fit: contain; /* Масштабирует изображение, сохраняя пропорции */
+  object-position: center; /* Центрирует изображение */
+  border-radius: 0.375rem; /* Это ваш rounded-md */
+  margin-bottom: 1rem;
+}
+
+/* Custom styles for improved appearance */
+
+/* Hero text fade-in animation */
+.fade-in-hero {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Search input and button improvements */
+#instrument-search {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 0.375rem; /* same as rounded-md */
+  transition: box-shadow 0.3s ease;
+}
+
+#instrument-search:focus {
+  box-shadow: 0 0 5px 2px #4f46e5; /* indigo-600 shadow */
+  outline: none;
+}
+
+section button:hover, section button:focus {
+  box-shadow: 0 4px 6px rgba(79,70,229,0.5); /* indigo hover shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Product cards hover effect */
+#carousel-track > div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#carousel-track > div:hover {
+  box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Carousel control buttons */
+#carousel-prev, #carousel-next {
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#carousel-prev:hover, #carousel-next:hover {
+  background-color: #4f46e5;
+  opacity: 1;
+  color: white;
+}
+
+/* Promotional offers cards hover */
+section.max-w-6xl > div.grid > div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.max-w-6xl > div.grid > div:hover {
+  box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/* Musicians images hover */
+section.max-w-6xl > div.flex > div {
+  transition: box-shadow 0.3s ease;
+}
+
+section.max-w-6xl > div.flex > div:hover {
+  box-shadow: 0 0 15px 3px #4f46e5;
+}
+
+/* Newsletter background with subtle gradient */
+section.bg-indigo-50 {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+}
+
+/* Footer enhancements */
+footer {
+  border-top: 4px solid #4f46e5;
+  padding-top: 2rem;
+}
+
+footer ul li a {
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #a5b4fc;
+}

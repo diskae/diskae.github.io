@@ -1,0 +1,18 @@
+
+        body {
+            background: linear-gradient(to bottom, #a7d9ed, #ffffff);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .skewed {
+            transform: skew(-3deg);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .skewed > * {
+            transform: skew(3deg);
+        }
