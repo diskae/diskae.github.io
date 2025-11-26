@@ -100,8 +100,8 @@ document.addEventListener('click', function (event) {
 
 function addLoginRegisterLinks() {
     const menuItems = [
-        { text: 'Вход', href: 'html/login.html' },
-        { text: 'Регистрация', href: 'html/registration.html' } // Adjust if registration page differs
+        { text: 'Вход', href: '../html/login.html' },
+        { text: 'Регистрация', href: '../html/registration.html' } // Adjust if registration page differs
     ];
 
     // Clear existing items
@@ -120,3 +120,4 @@ function addLoginRegisterLinks() {
     });
 }
 });
+
